@@ -1195,6 +1195,22 @@
     .ad-native { display: block; overflow: visible; }
     @media (min-width: 769px) { .ad-leaderboard { display: flex; } }
     @media (max-width: 768px) { .ad-mobile { display: flex; } }
+
+    /* Live rate badges (shown only after a successful in-browser fetch) */
+    .live-badge {
+      display: none; align-items: center; gap: 6px; margin-left: 10px; padding: 3px 9px;
+      border-radius: 999px; font-size: .68rem; font-weight: 850; letter-spacing: .04em;
+      text-transform: uppercase; vertical-align: middle; white-space: nowrap;
+    }
+    .live-badge.on { display: inline-flex; }
+    .live-badge .live-dot { width: 7px; height: 7px; flex: none; border-radius: 50%; background: #35d492; box-shadow: 0 0 0 3px rgba(53, 212, 146, .18); }
+    .live-badge .live-time { font-weight: 700; letter-spacing: 0; text-transform: none; opacity: .85; }
+    #fx-live-badge { background: rgba(53, 212, 146, .13); color: #8fe6bd; border: 1px solid rgba(53, 212, 146, .42); }
+    #crypto-live-badge { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); border: 1px solid color-mix(in srgb, var(--brand) 42%, transparent); }
+    @media (prefers-reduced-motion: no-preference) {
+      .live-badge .live-dot { animation: live-pulse 2.2s ease-in-out infinite; }
+      @keyframes live-pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(53, 212, 146, .18); } 50% { box-shadow: 0 0 0 5px rgba(53, 212, 146, .07); } }
+    }
   </style>
 </head>
 <body>
@@ -1383,22 +1399,22 @@
       <div class="market-board">
         <div class="market-head">
           <div><p class="market-kicker">Market snapshot · Pakistan · 22 October 2026</p><h2 id="rates-title">Gold Rate in Pakistan Today, Dollar Rate &amp; Petrol Price</h2></div>
-          <p>Check the gold rate in Pakistan today alongside the latest dated dollar rate in Pakistan, silver rate and petrol price Pakistan snapshot. These reference values support quick planning and are written into this page, so they do not update automatically.</p>
+          <p id="market-head-note">Check the gold rate in Pakistan today alongside the latest dated dollar rate in Pakistan, silver rate and petrol price Pakistan snapshot. These reference values support quick planning and are written into this page, so they do not update automatically.</p>
         </div>
         <div class="rate-groups">
           <div>
-            <div class="rate-group-head"><h3>Metals &amp; foreign exchange</h3><span>Indicative selling/reference prices</span></div>
+            <div class="rate-group-head"><h3>Metals &amp; foreign exchange</h3><span>Indicative selling/reference prices<span class="live-badge" id="fx-live-badge" role="status"><span class="live-dot" aria-hidden="true"></span>Live<span class="live-time" id="fx-live-time"></span></span></span></div>
             <div class="rates-grid">
               <article class="rate-card" data-rate="434536"><div class="rate-top"><span class="rate-name">Gold 24K</span><span class="trend down">↓ Rs 900</span></div><div class="rate-value">Rs 434,536<span class="rate-unit">per tola · Rs 372,544 / 10 grams</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
               <article class="rate-card" data-rate="402950"><div class="rate-top"><span class="rate-name">Gold 22K</span><span class="trend flat">Reference</span></div><div class="rate-value">Rs 402,950<span class="rate-unit">per tola</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
               <article class="rate-card" data-rate="4165"><div class="rate-top"><span class="rate-name">International Gold</span><span class="trend flat">Reference</span></div><div class="rate-value">$4,165<span class="rate-unit">per ounce</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
               <article class="rate-card" data-rate="6175"><div class="rate-top"><span class="rate-name">Silver</span><span class="trend flat">Reference</span></div><div class="rate-value">Rs 6,175<span class="rate-unit">per tola</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="276.40"><div class="rate-top"><span class="rate-name">USD / PKR</span><span class="trend flat">Steady</span></div><div class="rate-value">Rs 276.40<span class="rate-unit">1 USD = Rs 276.40 · 1 USD = €0.8906 · 1 USD = £0.7476</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="310.35"><div class="rate-top"><span class="rate-name">EUR / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 310.35<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="369.72"><div class="rate-top"><span class="rate-name">GBP / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 369.72<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="75.91"><div class="rate-top"><span class="rate-name">AED / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.91<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="75.00"><div class="rate-top"><span class="rate-name">SAR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.00<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="3.05"><div class="rate-top"><span class="rate-name">INR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 3.05<span class="rate-unit">open-market selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="276.40" data-fx="USD"><div class="rate-top"><span class="rate-name">USD / PKR</span><span class="trend flat">Steady</span></div><div class="rate-value">Rs 276.40<span class="rate-unit">1 USD = Rs 276.40 · 1 USD = €0.8906 · 1 USD = £0.7476</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="310.35" data-fx="EUR"><div class="rate-top"><span class="rate-name">EUR / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 310.35<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="369.72" data-fx="GBP"><div class="rate-top"><span class="rate-name">GBP / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 369.72<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="75.91" data-fx="AED"><div class="rate-top"><span class="rate-name">AED / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.91<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="75.00" data-fx="SAR"><div class="rate-top"><span class="rate-name">SAR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.00<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="3.05" data-fx="INR"><div class="rate-top"><span class="rate-name">INR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 3.05<span class="rate-unit">open-market selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
             </div>
           </div>
           <div>
@@ -1419,17 +1435,17 @@
       <div class="crypto-board">
         <div class="crypto-head">
           <div><p class="crypto-kicker">Digital assets · USD</p><h2 id="crypto-rates-title">Crypto Rates Today: Bitcoin, Ethereum, BNB &amp; More</h2></div>
-          <p>Review today’s dated crypto rates for Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin in US dollars. This CoinGecko price snapshot helps with market comparison and does not update automatically.</p>
+          <p id="crypto-head-note">Review today’s dated crypto rates for Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin in US dollars. This CoinGecko price snapshot helps with market comparison and does not update automatically.</p>
         </div>
         <div class="crypto-grid">
-          <article class="crypto-card"><div class="crypto-name"><span>Bitcoin</span><span class="crypto-symbol">BTC</span></div><div class="crypto-price">$84,519</div><div class="crypto-pkr">Rs 23,361,052</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Ethereum</span><span class="crypto-symbol">ETH</span></div><div class="crypto-price">$2,504.29</div><div class="crypto-pkr">Rs 692,186</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>BNB</span><span class="crypto-symbol">BNB</span></div><div class="crypto-price">$749.56</div><div class="crypto-pkr">Rs 207,178</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>XRP</span><span class="crypto-symbol">XRP</span></div><div class="crypto-price">$1.39</div><div class="crypto-pkr">Rs 384.20</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Solana</span><span class="crypto-symbol">SOL</span></div><div class="crypto-price">$108.53</div><div class="crypto-pkr">Rs 29,998</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Dogecoin</span><span class="crypto-symbol">DOGE</span></div><div class="crypto-price">$0.083161</div><div class="crypto-pkr">Rs 22.99</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="bitcoin"><div class="crypto-name"><span>Bitcoin</span><span class="crypto-symbol">BTC</span></div><div class="crypto-price">$84,519</div><div class="crypto-pkr">Rs 23,361,052</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="ethereum"><div class="crypto-name"><span>Ethereum</span><span class="crypto-symbol">ETH</span></div><div class="crypto-price">$2,504.29</div><div class="crypto-pkr">Rs 692,186</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="binancecoin"><div class="crypto-name"><span>BNB</span><span class="crypto-symbol">BNB</span></div><div class="crypto-price">$749.56</div><div class="crypto-pkr">Rs 207,178</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="ripple"><div class="crypto-name"><span>XRP</span><span class="crypto-symbol">XRP</span></div><div class="crypto-price">$1.39</div><div class="crypto-pkr">Rs 384.20</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="solana"><div class="crypto-name"><span>Solana</span><span class="crypto-symbol">SOL</span></div><div class="crypto-price">$108.53</div><div class="crypto-pkr">Rs 29,998</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card" data-crypto="dogecoin"><div class="crypto-name"><span>Dogecoin</span><span class="crypto-symbol">DOGE</span></div><div class="crypto-price">$0.083161</div><div class="crypto-pkr">Rs 22.99</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
         </div>
-        <p class="crypto-source">Source: CoinGecko · Static snapshot, not a transaction quote.</p>
+        <p class="crypto-source"><span id="crypto-source-text">Source: CoinGecko · Static snapshot, not a transaction quote.</span><span class="live-badge" id="crypto-live-badge" role="status"><span class="live-dot" aria-hidden="true"></span>Live<span class="live-time" id="crypto-live-time"></span></span></p>
       </div>
     </section>
 
@@ -1637,7 +1653,7 @@
               <div class="currency-rate"><strong>AED</strong><input data-currency-rate="AED" value="75.91" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
               <div class="currency-rate"><strong>SAR</strong><input data-currency-rate="SAR" value="75.00" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div><div class="currency-rate"><strong>INR</strong><input data-currency-rate="INR" value="3.05" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
             </div>
-            <div class="disclaimer">Dated reference rates are prefilled from the 22 October 2026 snapshot above. No live feed is used; replace them with the actual rate quoted by your provider.</div>
+            <div class="disclaimer" id="currency-disclaimer">Dated reference rates are prefilled from the 22 October 2026 snapshot above. No live feed is used; replace them with the actual rate quoted by your provider.</div>
           </div>
           <div class="result-side">
             <div>
@@ -2392,6 +2408,150 @@
 
       syncCurrencySymbols(); calculateTax(); calculateEmi(); calculateGold(); calculateCurrency(); calculateSip(); calculateCompound(); calculateComparison();
       /* Keep all content immediately visible; decorative entrance effects are skipped for a faster first render. */
+    }());
+  </script>
+  <script>
+    /* Live rates: currency and crypto refresh in the visitor's browser on every open.
+       Any failure or timeout leaves the baked-in snapshot values untouched. */
+    (function () {
+      'use strict';
+      if (!window.fetch) return;
+      var FETCH_TIMEOUT_MS = 8000;
+      var liveUsdPkr = null;
+
+      function fetchJson(url) {
+        var controller = ('AbortController' in window) ? new AbortController() : null;
+        var timer = controller ? window.setTimeout(function () { controller.abort(); }, FETCH_TIMEOUT_MS) : null;
+        return window.fetch(url, controller ? { signal: controller.signal } : {})
+          .then(function (response) {
+            if (timer) window.clearTimeout(timer);
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            return response.json();
+          })
+          .catch(function (err) {
+            if (timer) window.clearTimeout(timer);
+            throw err;
+          });
+      }
+      function validRate(value) { return typeof value === 'number' && isFinite(value) && value > 0; }
+      function fmt(value, minDp, maxDp) {
+        return new Intl.NumberFormat('en-PK', { minimumFractionDigits: minDp, maximumFractionDigits: maxDp }).format(value);
+      }
+      function todayText(date) {
+        return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      }
+      function todayIso(date) {
+        var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+        return date.getFullYear() + '-' + pad(date.getMonth() + 1) + '-' + pad(date.getDate());
+      }
+      function timeText(date) {
+        return date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      }
+      function showBadge(badgeId, timeId, fetchedAt) {
+        var badge = document.getElementById(badgeId);
+        if (!badge) return;
+        document.getElementById(timeId).textContent = '· fetched ' + timeText(fetchedAt);
+        badge.classList.add('on');
+      }
+      function setCardValue(card, text) {
+        var valueEl = card.querySelector('.rate-value');
+        if (valueEl && valueEl.firstChild && valueEl.firstChild.nodeType === 3) valueEl.firstChild.nodeValue = text;
+      }
+      function setCardMetaToday(card, fetchedAt) {
+        var meta = card.querySelector('.rate-meta');
+        if (meta) meta.textContent = 'Updated: ' + todayText(fetchedAt) + ' · Live rate';
+      }
+
+      function loadCurrencies() {
+        return fetchJson('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.min.json')
+          .then(function (data) {
+            var usd = data && data.usd;
+            if (!usd || !validRate(usd.pkr)) return;
+            var pkrPer = {
+              USD: usd.pkr,
+              EUR: validRate(usd.eur) ? usd.pkr / usd.eur : null,
+              GBP: validRate(usd.gbp) ? usd.pkr / usd.gbp : null,
+              AED: validRate(usd.aed) ? usd.pkr / usd.aed : null,
+              SAR: validRate(usd.sar) ? usd.pkr / usd.sar : null,
+              INR: validRate(usd.inr) ? usd.pkr / usd.inr : null
+            };
+            liveUsdPkr = usd.pkr;
+            var fetchedAt = new Date();
+            var updatedAny = false;
+            Object.keys(pkrPer).forEach(function (code) {
+              var rate = pkrPer[code];
+              if (!validRate(rate)) return;
+              var card = document.querySelector('[data-fx="' + code + '"]');
+              if (card) {
+                setCardValue(card, 'Rs ' + fmt(rate, 2, 2));
+                setCardMetaToday(card, fetchedAt);
+                card.setAttribute('data-rate', String(Math.round(rate * 100) / 100));
+                updatedAny = true;
+              }
+              var input = document.querySelector('[data-currency-rate="' + code + '"]');
+              if (input) {
+                input.value = rate.toFixed(2);
+                input.dispatchEvent(new Event('input', { bubbles: true }));
+              }
+            });
+            /* Cross values on the USD card: 1 USD = €x · £y */
+            var usdCard = document.querySelector('[data-fx="USD"]');
+            if (usdCard && validRate(usd.eur) && validRate(usd.gbp)) {
+              var unit = usdCard.querySelector('.rate-unit');
+              if (unit) unit.textContent = '1 USD = Rs ' + fmt(usd.pkr, 2, 2) + ' · 1 USD = €' + fmt(usd.eur, 4, 4) + ' · 1 USD = £' + fmt(usd.gbp, 4, 4);
+            }
+            if (updatedAny) {
+              showBadge('fx-live-badge', 'fx-live-time', fetchedAt);
+              var marketNote = document.getElementById('market-head-note');
+              if (marketNote) marketNote.textContent = 'Check the gold rate in Pakistan today alongside the live dollar rate in Pakistan, silver rate and petrol price Pakistan snapshot. Currency rates refresh live in your browser on every visit; gold, silver and fuel stay on the dated snapshot.';
+              var disclaimer = document.getElementById('currency-disclaimer');
+              if (disclaimer) disclaimer.textContent = 'Reference rates above were refreshed live in your browser just now. Replace them with the actual rate quoted by your provider for an exact estimate.';
+            }
+          })
+          .catch(function () { /* Silent fallback: baked-in snapshot stays. */ });
+      }
+
+      function loadCrypto() {
+        return fetchJson('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,ripple,solana,dogecoin&vs_currencies=usd')
+          .then(function (data) {
+            if (!data) return;
+            var usdPkr = liveUsdPkr;
+            if (!validRate(usdPkr)) {
+              var usdInput = document.querySelector('[data-currency-rate="USD"]');
+              var parsed = usdInput ? parseFloat(usdInput.value) : NaN;
+              usdPkr = validRate(parsed) ? parsed : null;
+            }
+            var fetchedAt = new Date();
+            var updatedAny = false;
+            ['bitcoin', 'ethereum', 'binancecoin', 'ripple', 'solana', 'dogecoin'].forEach(function (id) {
+              var entry = data[id];
+              var price = entry && entry.usd;
+              if (!validRate(price)) return;
+              var card = document.querySelector('[data-crypto="' + id + '"]');
+              if (!card) return;
+              var priceEl = card.querySelector('.crypto-price');
+              if (priceEl) priceEl.textContent = '$' + (price >= 10000 ? fmt(price, 0, 0) : price >= 1 ? fmt(price, 2, 2) : fmt(price, 2, 6));
+              if (validRate(usdPkr)) {
+                var pkrEl = card.querySelector('.crypto-pkr');
+                var pkrValue = price * usdPkr;
+                if (pkrEl) pkrEl.textContent = 'Rs ' + (pkrValue >= 1000 ? fmt(pkrValue, 0, 0) : fmt(pkrValue, 2, 2));
+              }
+              var dateEl = card.querySelector('.crypto-date');
+              if (dateEl) { dateEl.textContent = todayText(fetchedAt); dateEl.setAttribute('datetime', todayIso(fetchedAt)); }
+              updatedAny = true;
+            });
+            if (updatedAny) {
+              showBadge('crypto-live-badge', 'crypto-live-time', fetchedAt);
+              var cryptoNote = document.getElementById('crypto-head-note');
+              if (cryptoNote) cryptoNote.textContent = 'Review live crypto rates for Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin in US dollars. These CoinGecko prices refresh in your browser on every visit and help with market comparison.';
+              var sourceText = document.getElementById('crypto-source-text');
+              if (sourceText) sourceText.textContent = 'Source: CoinGecko · Live prices, not a transaction quote.';
+            }
+          })
+          .catch(function () { /* Silent fallback: baked-in snapshot stays. */ });
+      }
+
+      loadCurrencies().then(loadCrypto, loadCrypto);
     }());
   </script>
   <script data-cfasync="false" src="https://bauval.org/14/b2f6d6fc88ad8f9bae57f1751e71b48d"></script>
