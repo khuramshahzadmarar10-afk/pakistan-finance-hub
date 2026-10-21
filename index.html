@@ -56,7 +56,7 @@
     "@context":"https://schema.org",
     "@graph":[
       {"@type":"WebApplication","@id":"https://khuramshahzadmarar10-afk.github.io/pakistan-finance-hub/#app","name":"FinPulse","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://khuramshahzadmarar10-afk.github.io/pakistan-finance-hub/","description":"Free worldwide financial calculators with dated Pakistan market and cryptocurrency rate dashboards.","hasPart":[{"@id":"#crypto-rates"},{"@id":"#sip-tool"},{"@id":"#compound-tool"},{"@id":"#loan-comparison-tool"},{"@id":"#tax-tool"},{"@id":"#emi-tool"},{"@id":"#gold-tool"},{"@id":"#currency-tool"}]},
-      {"@type":"Dataset","@id":"#crypto-rates","name":"FinPulse Crypto Rates — 12 Oct 2026","description":"A dated static CoinGecko snapshot of Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin prices in US dollars.","dateModified":"2026-10-12","creator":{"@type":"Organization","name":"FinPulse"}}, 
+      {"@type":"Dataset","@id":"#crypto-rates","name":"FinPulse Crypto Rates — 22 October 2026","description":"A dated static CoinGecko snapshot of Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin prices in US dollars.","dateModified":"2026-10-22","creator":{"@type":"Organization","name":"FinPulse"}}, 
       {"@type":"WebApplication","@id":"#sip-tool","name":"FinPulse SIP Growth Calculator","description":"Project monthly investments, total contributions and estimated compound growth over time.","applicationCategory":"FinanceApplication","operatingSystem":"Any"},
       {"@type":"WebApplication","@id":"#compound-tool","name":"FinPulse Compound Interest Calculator","description":"Estimate how a lump sum may grow with yearly, half-yearly, quarterly or monthly compounding.","applicationCategory":"FinanceApplication","operatingSystem":"Any"},
       {"@type":"WebApplication","@id":"#loan-comparison-tool","name":"FinPulse Loan Comparison Calculator","description":"Compare two loan offers by monthly EMI, total interest and total repayment.","applicationCategory":"FinanceApplication","operatingSystem":"Any"},
@@ -1125,6 +1125,7 @@
     .crypto-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--gold) 62%, var(--line)); box-shadow: var(--card-shadow-hover); }
     .crypto-name { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; color: var(--ink); font-size: .96rem; font-weight: 850; }
     .crypto-symbol { color: var(--brand); font-size: .74rem; font-weight: 900; letter-spacing: .08em; }
+    .crypto-pkr { margin: -6px 0 12px; color: var(--gold); font-size: .92rem; font-weight: 800; font-variant-numeric: tabular-nums lining-nums; }
     .crypto-price { margin: 14px 0 13px; color: var(--brand-2); font-family: Charter, Cambria, ui-serif, Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.2rem); font-weight: 800; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums lining-nums; }
     .crypto-date { display: block; padding-top: 11px; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; font-weight: 740; }
     .crypto-note { margin: 7px 0 0; color: var(--muted); font-size: .72rem; }
@@ -1197,29 +1198,31 @@
   </style>
 </head>
 <body>
-  <div class="market-ticker" aria-label="Dated Pakistan market snapshot from 12 October 2026">
+  <div class="market-ticker" aria-label="Dated Pakistan market snapshot from 22 October 2026">
     <div class="ticker-track">
       <div class="ticker-set">
-        <span class="ticker-live">MARKET SNAPSHOT · As of 12 Oct 2026</span>
-        <span class="ticker-item"><strong>GOLD 24K</strong> Rs 437,500 / tola</span>
-        <span class="ticker-item"><strong>SILVER</strong> Rs 6,752 / tola</span>
-        <span class="ticker-item"><strong>USD</strong> Buy Rs 276.90 · Sell Rs 277.40</span>
-        <span class="ticker-item"><strong>EUR</strong> Rs 312.98 <em>▲</em></span>
-        <span class="ticker-item"><strong>GBP</strong> Rs 369.13 <em>▲</em></span>
-        <span class="ticker-item"><strong>PETROL</strong> Rs 398.30 / L</span>
-        <span class="ticker-item"><strong>DIESEL</strong> Rs 396.24 / L</span>
-        <span class="ticker-item">DATED 12 OCT 2026</span>
+        <span class="ticker-live">MARKET SNAPSHOT · As of 22 October 2026</span>
+        <span class="ticker-item"><strong>GOLD 24K</strong> Rs 434,536 / tola <b class="trend down">↓ Rs 900</b></span>
+        <span class="ticker-item"><strong>INTL GOLD</strong> $4,165 / oz</span>
+        <span class="ticker-item"><strong>SILVER</strong> Rs 6,175 / tola</span>
+        <span class="ticker-item"><strong>USD</strong> Rs 276.40</span>
+        <span class="ticker-item"><strong>EUR</strong> Rs 310.35</span>
+        <span class="ticker-item"><strong>GBP</strong> Rs 369.72</span>
+        <span class="ticker-item"><strong>PETROL</strong> Rs 379.31 / L</span>
+        <span class="ticker-item"><strong>DIESEL</strong> Rs 390.11 / L</span>
+        <span class="ticker-item">DATED 22 OCTOBER 2026</span>
       </div>
       <div class="ticker-set" aria-hidden="true">
-        <span class="ticker-live">MARKET SNAPSHOT · As of 12 Oct 2026</span>
-        <span class="ticker-item"><strong>GOLD 24K</strong> Rs 437,500 / tola</span>
-        <span class="ticker-item"><strong>SILVER</strong> Rs 6,752 / tola</span>
-        <span class="ticker-item"><strong>USD</strong> Buy Rs 276.90 · Sell Rs 277.40</span>
-        <span class="ticker-item"><strong>EUR</strong> Rs 312.98 <em>▲</em></span>
-        <span class="ticker-item"><strong>GBP</strong> Rs 369.13 <em>▲</em></span>
-        <span class="ticker-item"><strong>PETROL</strong> Rs 398.30 / L</span>
-        <span class="ticker-item"><strong>DIESEL</strong> Rs 396.24 / L</span>
-        <span class="ticker-item">DATED 12 OCT 2026</span>
+        <span class="ticker-live">MARKET SNAPSHOT · As of 22 October 2026</span>
+        <span class="ticker-item"><strong>GOLD 24K</strong> Rs 434,536 / tola <b class="trend down">↓ Rs 900</b></span>
+        <span class="ticker-item"><strong>INTL GOLD</strong> $4,165 / oz</span>
+        <span class="ticker-item"><strong>SILVER</strong> Rs 6,175 / tola</span>
+        <span class="ticker-item"><strong>USD</strong> Rs 276.40</span>
+        <span class="ticker-item"><strong>EUR</strong> Rs 310.35</span>
+        <span class="ticker-item"><strong>GBP</strong> Rs 369.72</span>
+        <span class="ticker-item"><strong>PETROL</strong> Rs 379.31 / L</span>
+        <span class="ticker-item"><strong>DIESEL</strong> Rs 390.11 / L</span>
+        <span class="ticker-item">DATED 22 OCTOBER 2026</span>
       </div>
     </div>
   </div>
@@ -1291,16 +1294,16 @@
 
         <article class="hero-slide" data-slide="1" aria-hidden="true">
           <div class="hero-slide-copy">
-            <p class="slide-kicker">TODAY’S RATES · 12 OCT 2026</p>
+            <p class="slide-kicker">TODAY’S RATES · 22 OCTOBER 2026</p>
             <h2>A market snapshot<br><span>at a glance.</span></h2>
             <p>See dated reference prices for gold, foreign exchange and fuel before you plan your next money move.</p>
             <a class="hero-cta" href="#today-rates">View today’s rates <span aria-hidden="true">→</span></a>
           </div>
           <div class="hero-visual rate-preview" aria-label="Preview of dated gold, US dollar, petrol and high-speed diesel rates">
-            <div><span>Gold 24K</span><strong>Rs 437,500</strong><small>per tola</small></div>
-            <div><span>USD / PKR</span><strong>Rs 277.40</strong><small>interbank selling · buying Rs 276.90</small></div>
-            <div><span>Petrol</span><strong>Rs 398.30</strong><small>per litre · 12 Oct 2026 · OGRA / Petroleum Division notification</small></div>
-            <div><span>High-Speed Diesel</span><strong>Rs 396.24</strong><small>per litre · 12 Oct 2026 · OGRA / Petroleum Division notification</small></div>
+            <div><span>Gold 24K</span><strong>Rs 434,536</strong><small>per tola · down Rs 900</small></div>
+            <div><span>USD / PKR</span><strong>Rs 276.40</strong><small>1 USD = Rs 276.40 · €0.8906 · £0.7476</small></div>
+            <div><span>Petrol</span><strong>Rs 379.31</strong><small>per litre · 22 October 2026 · down Rs 2.71</small></div>
+            <div><span>High-Speed Diesel</span><strong>Rs 390.11</strong><small>per litre · 22 October 2026 · up Rs 0.31</small></div>
           </div>
         </article>
 
@@ -1319,20 +1322,20 @@
 
         <article class="hero-slide" data-slide="3" aria-hidden="true">
           <div class="hero-slide-copy">
-            <p class="slide-kicker">BREAKING MARKET UPDATE · 12 OCT 2026</p>
-            <h2 class="breaking-title">Gold at <span>Rs 437,500</span> — petrol Rs 398.30, diesel Rs 396.24, dollar Rs 277.40, BTC near $83.6k</h2>
-            <p>Gold is Rs 437,500 per tola, petrol Rs 398.30 per litre, diesel Rs 396.24, the interbank dollar sells at Rs 277.40, and Bitcoin is near $83.6k.</p>
+            <p class="slide-kicker">BREAKING MARKET UPDATE · 22 OCTOBER 2026</p>
+            <h2 class="breaking-title">Petrol cut Rs 2.71 to Rs 379.31, diesel up 31 paisa — gold falls Rs 900 to Rs 434,536 per tola; USD/PKR at 276.40</h2>
+            <p>OGRA cut petrol by Rs 2.71 to Rs 379.31 per litre and raised high-speed diesel by 31 paisa to Rs 390.11, effective today. Gold fell Rs 900 to Rs 434,536 per tola, the rupee stood at Rs 276.40 per dollar, and Bitcoin traded near $84.5k.</p>
             <a class="hero-cta" href="#today-rates">Read the rate board <span aria-hidden="true">→</span></a>
           </div>
-          <div class="hero-visual news-visual" aria-label="Market update on gold, fuel, the US dollar and Bitcoin prices dated 12 October 2026">
-            <div class="news-masthead"><span>FinPulse Briefing</span><span>12 Oct 2026</span></div>
+          <div class="hero-visual news-visual" aria-label="Market update on gold, fuel, the US dollar and Bitcoin prices dated 22 October 2026">
+            <div class="news-masthead"><span>FinPulse Briefing</span><span>22 October 2026</span></div>
             <div class="news-sheet">
               <span class="news-label">Breaking update</span>
-              <h3 class="news-headline">Gold Rs 437,500; petrol Rs 398.30, diesel Rs 396.24, dollar Rs 277.40, BTC near $83.6k</h3>
-              <p class="news-deck">Petrol Rs 398.30/L · Diesel Rs 396.24/L</p>
+              <h3 class="news-headline">Petrol Rs 379.31, HSD Rs 390.11, gold Rs 434,536, USD/PKR 276.40, BTC $84,519</h3>
+              <p class="news-deck">Petrol down Rs 2.71 · HSD up Rs 0.31 · Gold down Rs 900</p>
               <div class="news-rates">
-                <div><span>Gold 24K</span><strong>Rs 437,500</strong></div>
-                <div><span>Bitcoin</span><strong>$83,594.45</strong></div>
+                <div><span>Gold 24K</span><strong>Rs 434,536</strong></div>
+                <div><span>Bitcoin</span><strong>$84,519</strong></div>
               </div>
               <p class="news-source">Source: OGRA / Petroleum Division notification</p>
             </div>
@@ -1379,30 +1382,32 @@
     <section class="market-shell" id="today-rates" aria-labelledby="rates-title">
       <div class="market-board">
         <div class="market-head">
-          <div><p class="market-kicker">Market snapshot · Pakistan</p><h2 id="rates-title">Gold Rate in Pakistan Today, Dollar Rate &amp; Petrol Price</h2></div>
+          <div><p class="market-kicker">Market snapshot · Pakistan · 22 October 2026</p><h2 id="rates-title">Gold Rate in Pakistan Today, Dollar Rate &amp; Petrol Price</h2></div>
           <p>Check the gold rate in Pakistan today alongside the latest dated dollar rate in Pakistan, silver rate and petrol price Pakistan snapshot. These reference values support quick planning and are written into this page, so they do not update automatically.</p>
         </div>
         <div class="rate-groups">
           <div>
             <div class="rate-group-head"><h3>Metals &amp; foreign exchange</h3><span>Indicative selling/reference prices</span></div>
             <div class="rates-grid">
-              <article class="rate-card" data-rate="437500"><div class="rate-top"><span class="rate-name">Gold 24K</span><span class="trend flat">Updated</span></div><div class="rate-value">Rs 437,500<span class="rate-unit">per tola · Rs 375,090 / 10 gram · Rs 37,509 / gram</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="6752"><div class="rate-top"><span class="rate-name">Silver</span><span class="trend flat">Updated</span></div><div class="rate-value">Rs 6,752<span class="rate-unit">per tola</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="277.40"><div class="rate-top"><span class="rate-name">USD / PKR</span><span class="trend flat">Interbank</span></div><div class="rate-value">Rs 277.40<span class="rate-unit">selling · Rs 276.90 buying</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="312.98"><div class="rate-top"><span class="rate-name">EUR / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 312.98<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="369.13"><div class="rate-top"><span class="rate-name">GBP / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 369.13<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="75.91"><div class="rate-top"><span class="rate-name">AED / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.91<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="75.00"><div class="rate-top"><span class="rate-name">SAR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.00<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
-              <article class="rate-card" data-rate="3.05"><div class="rate-top"><span class="rate-name">INR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 3.05<span class="rate-unit">open-market selling reference</span></div><div class="rate-meta">Updated: 12 Oct 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="434536"><div class="rate-top"><span class="rate-name">Gold 24K</span><span class="trend down">↓ Rs 900</span></div><div class="rate-value">Rs 434,536<span class="rate-unit">per tola · Rs 372,544 / 10 grams</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="402950"><div class="rate-top"><span class="rate-name">Gold 22K</span><span class="trend flat">Reference</span></div><div class="rate-value">Rs 402,950<span class="rate-unit">per tola</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="4165"><div class="rate-top"><span class="rate-name">International Gold</span><span class="trend flat">Reference</span></div><div class="rate-value">$4,165<span class="rate-unit">per ounce</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="6175"><div class="rate-top"><span class="rate-name">Silver</span><span class="trend flat">Reference</span></div><div class="rate-value">Rs 6,175<span class="rate-unit">per tola</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="276.40"><div class="rate-top"><span class="rate-name">USD / PKR</span><span class="trend flat">Steady</span></div><div class="rate-value">Rs 276.40<span class="rate-unit">1 USD = Rs 276.40 · 1 USD = €0.8906 · 1 USD = £0.7476</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="310.35"><div class="rate-top"><span class="rate-name">EUR / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 310.35<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="369.72"><div class="rate-top"><span class="rate-name">GBP / PKR</span><span class="trend up">↑</span></div><div class="rate-value">Rs 369.72<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="75.91"><div class="rate-top"><span class="rate-name">AED / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.91<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="75.00"><div class="rate-top"><span class="rate-name">SAR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 75.00<span class="rate-unit">cash selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
+              <article class="rate-card" data-rate="3.05"><div class="rate-top"><span class="rate-name">INR / PKR</span><span class="trend flat">→</span></div><div class="rate-value">Rs 3.05<span class="rate-unit">open-market selling reference</span></div><div class="rate-meta">Updated: 22 October 2026 · Updated daily</div></article>
             </div>
           </div>
           <div>
             <div class="rate-group-head"><h3>Energy</h3><span>Pakistan · OGRA / Petroleum Division reference</span></div>
             <div class="rates-grid">
-              <article class="rate-card" data-rate="398.30"><div class="rate-top"><span class="rate-name">Petrol</span><span class="trend flat">10–12 Oct</span></div><div class="rate-value">Rs 398.30<span class="rate-unit">per litre</span></div><div class="rate-meta">12 Oct 2026 · OGRA / Petroleum Division notification</div></article>
-              <article class="rate-card" data-rate="396.24"><div class="rate-top"><span class="rate-name">High-Speed Diesel</span><span class="trend flat">10–12 Oct</span></div><div class="rate-value">Rs 396.24<span class="rate-unit">per litre</span></div><div class="rate-meta">12 Oct 2026 · OGRA / Petroleum Division notification</div></article>
-              <article class="rate-card" data-rate="329.54"><div class="rate-top"><span class="rate-name">Kerosene</span><span class="trend flat">→</span></div><div class="rate-value">Rs 329.54<span class="rate-unit">per litre</span></div><div class="rate-meta">12 Oct 2026 · OGRA / Petroleum Division notification</div></article>
-              <article class="rate-card" data-rate="279.34"><div class="rate-top"><span class="rate-name">LPG</span><span class="trend up">↑ 20.68</span></div><div class="rate-value">Rs 279.34<span class="rate-unit">per kg · Rs 3,296.23 / 11.8 kg</span></div><div class="rate-meta">12 Oct 2026 · OGRA / Petroleum Division notification</div></article>
+              <article class="rate-card" data-rate="379.31"><div class="rate-top"><span class="rate-name">Petrol</span><span class="trend down">↓ Rs 2.71</span></div><div class="rate-value">Rs 379.31<span class="rate-unit">per litre · down Rs 2.71</span></div><div class="rate-meta">Effective 22 October 2026 · OGRA / Petroleum Division notification</div></article>
+              <article class="rate-card" data-rate="390.11"><div class="rate-top"><span class="rate-name">High-Speed Diesel</span><span class="trend up">↑ Rs 0.31</span></div><div class="rate-value">Rs 390.11<span class="rate-unit">per litre · up Rs 0.31</span></div><div class="rate-meta">Effective 22 October 2026 · OGRA / Petroleum Division notification</div></article>
+              <article class="rate-card" data-rate="330.14"><div class="rate-top"><span class="rate-name">Kerosene</span><span class="trend flat">→</span></div><div class="rate-value">Rs 330.14<span class="rate-unit">per litre</span></div><div class="rate-meta">22 October 2026 · OGRA / Petroleum Division notification</div></article>
+              <article class="rate-card" data-rate="279.34"><div class="rate-top"><span class="rate-name">LPG</span><span class="trend up">↑ 20.68</span></div><div class="rate-value">Rs 279.34<span class="rate-unit">per kg · Rs 3,296.23 / 11.8 kg</span></div><div class="rate-meta">22 October 2026 · OGRA / Petroleum Division notification</div></article>
             </div>
           </div>
         </div>
@@ -1417,12 +1422,12 @@
           <p>Review today’s dated crypto rates for Bitcoin, Ethereum, BNB, XRP, Solana and Dogecoin in US dollars. This CoinGecko price snapshot helps with market comparison and does not update automatically.</p>
         </div>
         <div class="crypto-grid">
-          <article class="crypto-card"><div class="crypto-name"><span>Bitcoin</span><span class="crypto-symbol">BTC</span></div><div class="crypto-price">$83,594.45</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Ethereum</span><span class="crypto-symbol">ETH</span></div><div class="crypto-price">$2,531.36</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>BNB</span><span class="crypto-symbol">BNB</span></div><div class="crypto-price">$752.15</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>XRP</span><span class="crypto-symbol">XRP</span></div><div class="crypto-price">$1.407</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Solana</span><span class="crypto-symbol">SOL</span></div><div class="crypto-price">$112.31</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
-          <article class="crypto-card"><div class="crypto-name"><span>Dogecoin</span><span class="crypto-symbol">DOGE</span></div><div class="crypto-price">$0.0872</div><time class="crypto-date" datetime="2026-10-12">12 Oct 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>Bitcoin</span><span class="crypto-symbol">BTC</span></div><div class="crypto-price">$84,519</div><div class="crypto-pkr">Rs 23,361,052</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>Ethereum</span><span class="crypto-symbol">ETH</span></div><div class="crypto-price">$2,504.29</div><div class="crypto-pkr">Rs 692,186</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>BNB</span><span class="crypto-symbol">BNB</span></div><div class="crypto-price">$749.56</div><div class="crypto-pkr">Rs 207,178</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>XRP</span><span class="crypto-symbol">XRP</span></div><div class="crypto-price">$1.39</div><div class="crypto-pkr">Rs 384.20</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>Solana</span><span class="crypto-symbol">SOL</span></div><div class="crypto-price">$108.53</div><div class="crypto-pkr">Rs 29,998</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
+          <article class="crypto-card"><div class="crypto-name"><span>Dogecoin</span><span class="crypto-symbol">DOGE</span></div><div class="crypto-price">$0.083161</div><div class="crypto-pkr">Rs 22.99</div><time class="crypto-date" datetime="2026-10-22">22 October 2026</time><p class="crypto-note">Crypto rates rozana update hote hain</p></article>
         </div>
         <p class="crypto-source">Source: CoinGecko · Static snapshot, not a transaction quote.</p>
       </div>
@@ -1523,7 +1528,7 @@
               <div class="slab-list" id="slab-list"></div>
             </div>
             <div class="disclaimer">Estimate only. Actual tax can change with exemptions, allowances, credits, deductions, arrears and FBR treatment. Consult a tax professional for filing.</div>
-            <p class="source-line">Rates checked 12 Oct 2026 against published FY 2026–27 summaries: <a href="https://cssprep.com.pk/income-tax-slabs-2026-27-pakistan-salaried-class/" target="_blank" rel="noopener">confirmed slab table</a> and <a href="https://taxwizard.pk/blog/pakistan-salaried-tax-budget-2026-27-impact/" target="_blank" rel="noopener">Finance Act change analysis</a>.</p>
+            <p class="source-line">Rates checked 22 October 2026 against published FY 2026–27 summaries: <a href="https://cssprep.com.pk/income-tax-slabs-2026-27-pakistan-salaried-class/" target="_blank" rel="noopener">confirmed slab table</a> and <a href="https://taxwizard.pk/blog/pakistan-salaried-tax-budget-2026-27-impact/" target="_blank" rel="noopener">Finance Act change analysis</a>.</p>
           </div>
           <div class="result-side">
             <div>
@@ -1621,18 +1626,18 @@
             <div class="fields">
               <div class="field"><label for="currency-amount">Amount</label><input id="currency-amount" inputmode="decimal" type="number" min="0" step="0.01" value="100000" /></div>
               <div class="field"><label for="currency-code">Convert PKR to</label><select id="currency-code"><option value="USD">USD — US Dollar</option><option value="GBP">GBP — British Pound</option><option value="EUR">EUR — Euro</option><option value="AED">AED — UAE Dirham</option><option value="SAR">SAR — Saudi Riyal</option><option value="INR">INR — Indian Rupee</option></select></div>
-              <div class="field full"><label for="selected-rate">PKR for 1 selected currency unit</label><div class="input-wrap has-prefix"><span class="prefix">Rs</span><input id="selected-rate" inputmode="decimal" type="number" min="0.0001" step="0.01" value="277.40" placeholder="Enter exchange rate" /></div></div>
+              <div class="field full"><label for="selected-rate">PKR for 1 selected currency unit</label><div class="input-wrap has-prefix"><span class="prefix">Rs</span><input id="selected-rate" inputmode="decimal" type="number" min="0.0001" step="0.01" value="276.40" placeholder="Enter exchange rate" /></div></div>
             </div>
             <div class="actions"><button class="primary" type="button" id="currency-calc">Convert currency</button><button class="secondary" type="button" id="currency-direction">Switch: foreign to PKR</button></div>
             <p class="inline-error" id="currency-error" role="status"></p>
             <div class="rate-grid" aria-label="Optional personal rate sheet">
-              <div class="currency-rate"><strong>USD</strong><input data-currency-rate="USD" value="277.40" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
-              <div class="currency-rate"><strong>GBP</strong><input data-currency-rate="GBP" value="369.13" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
-              <div class="currency-rate"><strong>EUR</strong><input data-currency-rate="EUR" value="312.98" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
+              <div class="currency-rate"><strong>USD</strong><input data-currency-rate="USD" value="276.40" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
+              <div class="currency-rate"><strong>GBP</strong><input data-currency-rate="GBP" value="369.72" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
+              <div class="currency-rate"><strong>EUR</strong><input data-currency-rate="EUR" value="310.35" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
               <div class="currency-rate"><strong>AED</strong><input data-currency-rate="AED" value="75.91" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
               <div class="currency-rate"><strong>SAR</strong><input data-currency-rate="SAR" value="75.00" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div><div class="currency-rate"><strong>INR</strong><input data-currency-rate="INR" value="3.05" inputmode="decimal" type="number" min="0" step="0.01" placeholder="PKR rate" /></div>
             </div>
-            <div class="disclaimer">Dated reference rates are prefilled from the 12 Oct 2026 snapshot above. No live feed is used; replace them with the actual rate quoted by your provider.</div>
+            <div class="disclaimer">Dated reference rates are prefilled from the 22 October 2026 snapshot above. No live feed is used; replace them with the actual rate quoted by your provider.</div>
           </div>
           <div class="result-side">
             <div>
@@ -1697,7 +1702,7 @@
         <p>How FinPulse handles calculator entries, analytics information and cookies.</p>
       </header>
       <article class="policy-body">
-        <p class="policy-lead"><strong>Last updated: 12 October 2026.</strong> FinPulse is designed so you can use its financial calculators without creating an account or sending us the figures you enter.</p>
+        <p class="policy-lead"><strong>Last updated: 22 October 2026.</strong> FinPulse is designed so you can use its financial calculators without creating an account or sending us the figures you enter.</p>
 
         <h2>Calculator information stays in your browser</h2>
         <p>The values you enter into the SIP, compound interest, loan comparison, income tax, loan EMI, gold and currency calculators are processed entirely by JavaScript in your current browser tab. FinPulse does not upload, save or receive those calculator inputs.</p>
@@ -1772,7 +1777,7 @@
         <p>The limits of these estimates and your responsibilities when using them.</p>
       </header>
       <article class="policy-body">
-        <p class="policy-lead"><strong>Last updated: 12 October 2026.</strong> By using FinPulse, you agree to use its calculators as general educational and comparison tools.</p>
+        <p class="policy-lead"><strong>Last updated: 22 October 2026.</strong> By using FinPulse, you agree to use its calculators as general educational and comparison tools.</p>
 
         <h2>Estimates, not financial advice</h2>
         <p>Calculator results are estimates based on the values you enter and the formulas or default assumptions shown on the page. They are not financial, tax, investment, legal, accounting or lending advice.</p>
@@ -1802,7 +1807,7 @@
             <strong>FinPulse</strong>
           </a>
           <p class="footer-story">Clear financial planning for people everywhere, with Pakistan market context where it matters. Compare scenarios, inspect the assumptions and move forward with confidence.</p>
-          <p class="footer-note">Market snapshot dated 12 October 2026. Displayed prices are references, not transaction quotes.</p>
+          <p class="footer-note">Market snapshot dated 22 October 2026. Displayed prices are references, not transaction quotes.</p>
         </div>
         <div class="footer-column">
           <h2>Explore</h2>
