@@ -1,0 +1,5 @@
+# FinPulse — Pakistan Finance Hub
+> Live currency rates (USD/PKR, EUR, GBP), gold and silver rates, fuel prices, crypto prices, plus free SIP, EMI, income tax and currency converter calculators for Pakistan. Financial inputs are never stored.
+
+- Home: https://khuramshahzadmarar10-afk.github.io/pakistan-finance-hub/
+- Sitemap: https://khuramshahzadmarar10-afk.github.io/pakistan-finance-hub/sitemap.xml
