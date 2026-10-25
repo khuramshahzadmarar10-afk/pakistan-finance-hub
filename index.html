@@ -1213,11 +1213,101 @@
       .live-badge .live-dot { animation: live-pulse 2.2s ease-in-out infinite; }
       @keyframes live-pulse { 0%, 100% { box-shadow: 0 0 0 3px rgba(53, 212, 146, .18); } 50% { box-shadow: 0 0 0 5px rgba(53, 212, 146, .07); } }
     }
+  
+    /* ============================================================
+       GLASSMORPHISM RESKIN (CSS-only override layer)
+       Deep-green aurora + translucent glass panels, forced dark.
+       Original rules above are untouched; these later rules win
+       the cascade. No JavaScript, ids, classes or content changed.
+       ============================================================ */
+    :root, [data-theme="light"], [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #06120d;
+      --surface: rgba(255, 255, 255, .08);
+      --surface-2: rgba(255, 255, 255, .13);
+      --surface-3: rgba(255, 255, 255, .18);
+      --ink: #f2f7f5;
+      --muted: rgba(235, 245, 240, .65);
+      --line: rgba(255, 255, 255, .18);
+      --brand: #65d0a8;
+      --brand-2: #8cdfbf;
+      --brand-soft: rgba(46, 230, 168, .14);
+      --gold: #efc36e;
+      --gold-soft: rgba(255, 209, 102, .14);
+      --danger: #ff9c9c;
+      --hero-ink: #f8fcfa;
+      --hero-muted: #cce5da;
+      --hero-line: rgba(255, 255, 255, .22);
+      --card-shadow: 0 18px 40px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .22);
+      --card-shadow-hover: 0 24px 48px rgba(0, 0, 0, .42), inset 0 1px 0 rgba(255, 255, 255, .25);
+      --shadow: 0 18px 40px rgba(0, 0, 0, .35), inset 0 1px 0 rgba(255, 255, 255, .22);
+    }
+
+    /* Aurora background layer (markup added right after the opening body tag) */
+    body { background: #04140f; }
+    .bg { position: fixed; inset: 0; z-index: -2; pointer-events: none; background:
+      radial-gradient(1100px 600px at 85% -10%, #0b3d2e 0%, transparent 60%),
+      radial-gradient(900px 700px at -10% 110%, #062a3f 0%, transparent 55%),
+      linear-gradient(160deg, #04140f 0%, #06231a 45%, #03130d 100%); }
+    .blob { position: fixed; border-radius: 50%; filter: blur(90px); opacity: .5; z-index: -1; pointer-events: none; animation: fp-drift 22s ease-in-out infinite alternate; }
+    .b1 { width: 480px; height: 480px; background: #0f9d6e; top: -140px; left: -120px; }
+    .b2 { width: 420px; height: 420px; background: #0e6ba8; bottom: -160px; right: -100px; animation-delay: -8s; }
+    .b3 { width: 300px; height: 300px; background: #7a5af8; top: 38%; left: 55%; opacity: .28; animation-delay: -14s; }
+    @keyframes fp-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(60px, 40px) scale(1.12); } }
+    @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
+
+    /* Glass blur on the major panels and cards */
+    .topbar, .section-nav, .tool-card, .workspace, .result-side, .metric,
+    .chart-card, .panel, .compare-card, .loan-box, .gold-result,
+    .policy-body, .policy-tool, .calculator-toolbar, .crypto-board,
+    .crypto-card, .segmented, .theme-toggle, .trust-chip {
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+
+    /* Big feature boards: opaque brand gradients -> translucent glass */
+    .market-board {
+      background: linear-gradient(145deg, rgba(4, 28, 22, .78) 0%, rgba(8, 47, 37, .68) 62%, rgba(18, 59, 46, .62) 100%);
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .hero-carousel {
+      background: linear-gradient(150deg, rgba(6, 59, 44, .72), rgba(3, 45, 34, .8));
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .policy-hero {
+      background: linear-gradient(130deg, rgba(6, 59, 44, .7), rgba(8, 112, 82, .52) 70%, rgba(11, 133, 100, .46));
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    footer {
+      background: linear-gradient(135deg, rgba(6, 41, 31, .8), rgba(11, 80, 59, .64));
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .cookie-notice {
+      background: rgba(7, 63, 49, .82);
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .market-ticker { background: rgba(6, 30, 24, .85); }
+
+    /* Glassy form controls; dropdown options stay dark-on-light */
+    input, select, textarea { background: rgba(255, 255, 255, .1); color: var(--ink); }
+    select option { color: #10251d; background: #ffffff; }
+    ::placeholder { color: rgba(235, 245, 240, .45); }
   </style>
   <meta property="og:locale" content="en_PK" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
 </head>
 <body>
+<div class="bg"></div><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="market-ticker" aria-label="Dated Pakistan market snapshot from 25 October 2026">
     <div class="ticker-track">
       <div class="ticker-set">
