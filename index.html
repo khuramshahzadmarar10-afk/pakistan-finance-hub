@@ -1302,6 +1302,7 @@
     input, select, textarea { background: rgba(255, 255, 255, .1); color: var(--ink); }
     select option { color: #10251d; background: #ffffff; }
     ::placeholder { color: rgba(235, 245, 240, .45); }
+    a.tool-card { display: block; text-decoration: none; }
   </style>
   <meta property="og:locale" content="en_PK" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
@@ -1366,15 +1367,15 @@
 
   <nav class="section-nav" id="section-nav" aria-label="Jump to a financial section">
     <div class="shell section-nav-list">
-      <a class="section-nav-link is-active" href="#today-rates" data-section-link="today-rates" aria-current="location">Today’s Rates</a>
+      <a class="section-nav-link is-active" href="gold-rate-pakistan/" data-section-link="today-rates" aria-current="location">Today’s Rates</a>
       <a class="section-nav-link" href="#crypto-rates" data-section-link="crypto-rates">Crypto</a>
-      <a class="section-nav-link" href="#sip-growth-calculator" data-section-link="sip-growth-calculator">SIP Growth</a>
-      <a class="section-nav-link" href="#compound-interest-calculator" data-section-link="compound-interest-calculator">Compound Interest</a>
-      <a class="section-nav-link" href="#loan-comparison-calculator" data-section-link="loan-comparison-calculator">Loan Comparison</a>
-      <a class="section-nav-link" href="#income-tax-calculator" data-section-link="income-tax-calculator">Income Tax</a>
-      <a class="section-nav-link" href="#loan-emi-calculator" data-section-link="loan-emi-calculator">Loan EMI</a>
-      <a class="section-nav-link" href="#gold-converter" data-section-link="gold-converter">Gold Converter</a>
-      <a class="section-nav-link" href="#currency-converter" data-section-link="currency-converter">Currency Converter</a>
+      <a class="section-nav-link" href="sip-calculator/" data-section-link="sip-growth-calculator">SIP Growth</a>
+      <a class="section-nav-link" href="compound-interest-calculator/" data-section-link="compound-interest-calculator">Compound Interest</a>
+      <a class="section-nav-link" href="loan-comparison-calculator/" data-section-link="loan-comparison-calculator">Loan Comparison</a>
+      <a class="section-nav-link" href="income-tax-calculator-pakistan/" data-section-link="income-tax-calculator">Income Tax</a>
+      <a class="section-nav-link" href="emi-calculator/" data-section-link="loan-emi-calculator">Loan EMI</a>
+      <a class="section-nav-link" href="gold-converter/" data-section-link="gold-converter">Gold Converter</a>
+      <a class="section-nav-link" href="currency-converter/" data-section-link="currency-converter">Currency Converter</a>
       <a class="section-nav-link" href="#financial-calculator-faq" data-section-link="financial-calculator-faq">FAQ</a>
     </div>
   </nav>
@@ -1538,13 +1539,13 @@
         <div class="currency-picker"><label for="global-currency">Currency</label><select id="global-currency"><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — British Pound</option><option value="INR">INR — Indian Rupee</option><option value="PKR" selected>PKR — Pakistani Rupee</option><option value="AED">AED — UAE Dirham</option><option value="SAR">SAR — Saudi Riyal</option></select></div>
       </div>
       <div class="tool-grid seven" role="tablist" aria-label="Finance calculators">
-        <button class="tool-card featured active" role="tab" aria-selected="true" aria-controls="sip-growth-calculator" data-tool="sip"><span class="tool-num">01</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/><path d="m3 7 6-4 5 5 7-5"/></svg><h3>SIP Growth</h3><p>Monthly investing projection</p></button>
-        <button class="tool-card featured" role="tab" aria-selected="false" aria-controls="compound-interest-calculator" data-tool="compound"><span class="tool-num">02</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 15h7a2 2 0 0 0 0-4h-6a2 2 0 0 1 0-4h7M12 5v12"/></svg><h3>Compound Interest</h3><p>See money compound over time</p></button>
-        <button class="tool-card featured" role="tab" aria-selected="false" aria-controls="loan-comparison-calculator" data-tool="compare"><span class="tool-num">03</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4v16M17 4v16M3 8h8M13 16h8"/><path d="m8 5 3 3-3 3M16 13l-3 3 3 3"/></svg><h3>Loan Comparison</h3><p>Choose the lower-cost offer</p></button>
-        <button class="tool-card" role="tab" aria-selected="false" aria-controls="income-tax-calculator" data-tool="tax"><span class="tool-num">04</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3h16v18H4z"/><path d="M8 7h8M8 11h2M14 11h2M8 15h2M14 15h2"/></svg><h3>Income Tax</h3><p>FY 2026–27 salary estimate</p></button>
-        <button class="tool-card" role="tab" aria-selected="false" aria-controls="loan-emi-calculator" data-tool="emi"><span class="tool-num">05</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18M5 10v9m4-9v9m6-9v9m4-9v9M2 21h20M12 3 3 7h18z"/></svg><h3>Loan EMI</h3><p>Monthly instalment planner</p></button>
-        <button class="tool-card" role="tab" aria-selected="false" aria-controls="gold-converter" data-tool="gold"><span class="tool-num">06</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 9 2-5h10l2 5-7 11L5 9Z"/><path d="M5 9h14M9 4l3 16 3-16"/></svg><h3>Gold Converter</h3><p>Tola, masha and gram</p></button>
-        <button class="tool-card" role="tab" aria-selected="false" aria-controls="currency-converter" data-tool="currency"><span class="tool-num">07</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><h3>Currency</h3><p>PKR with live reference rates</p></button>
+        <a class="tool-card featured active" href="sip-calculator/"><span class="tool-num">01</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/><path d="m3 7 6-4 5 5 7-5"/></svg><h3>SIP Growth</h3><p>Monthly investing projection</p></a>
+        <a class="tool-card featured" href="compound-interest-calculator/"><span class="tool-num">02</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 15h7a2 2 0 0 0 0-4h-6a2 2 0 0 1 0-4h7M12 5v12"/></svg><h3>Compound Interest</h3><p>See money compound over time</p></a>
+        <a class="tool-card featured" href="loan-comparison-calculator/"><span class="tool-num">03</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4v16M17 4v16M3 8h8M13 16h8"/><path d="m8 5 3 3-3 3M16 13l-3 3 3 3"/></svg><h3>Loan Comparison</h3><p>Choose the lower-cost offer</p></a>
+        <a class="tool-card" href="income-tax-calculator-pakistan/"><span class="tool-num">04</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3h16v18H4z"/><path d="M8 7h8M8 11h2M14 11h2M8 15h2M14 15h2"/></svg><h3>Income Tax</h3><p>FY 2026–27 salary estimate</p></a>
+        <a class="tool-card" href="emi-calculator/"><span class="tool-num">05</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10h18M5 10v9m4-9v9m6-9v9m4-9v9M2 21h20M12 3 3 7h18z"/></svg><h3>Loan EMI</h3><p>Monthly instalment planner</p></a>
+        <a class="tool-card" href="gold-converter/"><span class="tool-num">06</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 9 2-5h10l2 5-7 11L5 9Z"/><path d="M5 9h14M9 4l3 16 3-16"/></svg><h3>Gold Converter</h3><p>Tola, masha and gram</p></a>
+        <a class="tool-card" href="currency-converter/"><span class="tool-num">07</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg><h3>Currency</h3><p>PKR with live reference rates</p></a>
       </div>
     </section>
 
@@ -1905,7 +1906,7 @@
         </div>
         <div class="footer-column">
           <h2>Tools</h2>
-          <a href="#calculators" data-footer-tool="sip">SIP growth</a><a href="#calculators" data-footer-tool="compound">Compound interest</a><a href="#calculators" data-footer-tool="compare">Loan comparison</a><a href="#calculators" data-footer-tool="tax">Income tax</a><a href="#calculators" data-footer-tool="currency">Currency</a>
+          <a href="sip-calculator/">SIP growth</a><a href="compound-interest-calculator/">Compound interest</a><a href="loan-comparison-calculator/">Loan comparison</a><a href="income-tax-calculator-pakistan/">Income tax</a><a href="currency-converter/">Currency</a>
         </div>
         <div class="footer-column updates">
           <h2>FinPulse briefing</h2>
